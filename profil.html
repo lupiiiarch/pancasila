@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar BPIP</title>
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlide(currentSlide);
+        });
+    </script>
+    <body>
+    <header>
+        <nav class="navbar">
+        <div class="navbar-left">
+            <img src="img/logo.png" alt="Logo BPIP" class="logo" />
+            <div class="title">
+            <h1>PANCASILA BUKAN ALAT POLITIK ATAU KEPENTINGAN KEKUASAAN</h1>
+            <p>D&N Media Edukasi</p>
+            </div>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="#">Galeri Kegiatan</a></li>
+        </ul>
+        </nav>
+        </header>
+
+        <main>
+        <section id="tentang" class="profil-container">
+        <h2 class="judul-profil">Profil Kelompok</h2>
+        <div class="anggota-wrapper">
+        <div class="anggota-card">
+            <div class="foto-profil" id="foto-dinda">
+            <img src="gambar_profil1.jpg" alt="Foto Dinda"> 
+            </div>
+            <h3>Dinda Cahyani Kencana Pane</h3>
+            <p><strong>NIM:</strong> 2405181046</p>
+            <p><strong>Kelas:</strong> TRPL-2A</p>
+            <p><strong>Peran:</strong> Desain UI Website, Penyusun Konten Edukasi</p>
+        </div>
+        <div class="anggota-card">
+            <div class="foto-profil" id="foto-nazwa">
+            <img src="gambar_profil2.jpg" alt="Foto Nazwa"> 
+            </div>
+            <h3>Nazwa Yumna Zharifah</h3>
+            <p><strong>NIM:</strong> 2405181021</p>
+            <p><strong>Kelas:</strong> TRPL-2A</p>
+            <p><strong>Peran:</strong> Developer Front-End Website, Penulis Materi Analisis</p>
+        </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+            <img src="img/logo.png" alt="Logo D&N Media" class="footer-logo" />
+            <div>
+                <h4>D&N Media Edukasi</h4>
+                <p>Menumbuhkan Kesadaran Nilai-Nilai Pancasila</p>
+            </div>
+            </div>
+
+            <div class="footer-social">
+            <h4>Ikuti Kami</h4>
+            <div class="social-icons">
+                <a href="https://twitter.com/i/flow/signup"><img src="x.png" alt="x"></a>
+
+                <a href="https://www.instagram.com/"><img src="ig.png" alt="Instagram" /></a>
+
+                <a href="https://www.facebook.com/?locale=id_ID"><img src="facebook.png" alt="Facebook" /></a>
+            </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 D&N Media Edukasi. Seluruh hak cipta dilindungi undang-undang.</p>
+        </div>
+</footer>
+
+</body>
+</html>
